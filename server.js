@@ -1,5 +1,13 @@
 const axios = require('axios');
-const config = require('./json/config.json');
+const config = {
+  "url": "https://api.weixin.qq.com/cgi-bin/message/template/send",
+  "appId": "wxbc423459651363c0",
+  "appSecret": "96c34ae4bf421875d74d0016be4a8a05",
+  "templateId": "j4QFFpQcqrSSL970pevgy24Z5UsLIhKjgDOXG8e0nJs",
+  "user": ["oaX246GIQpySf9uj5znkf4DnDxjk", "oaX246Oan42q76oiwiH9oMlLaed4"],
+  "weatherKey": "4d23ff80a7504f6b803baa826244a0a3",
+  "region": "济南市"
+};
 
 // 获取token
 async function getAccessToken() {
