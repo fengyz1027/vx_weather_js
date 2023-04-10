@@ -1,4 +1,5 @@
 const axios = require('axios');
+// 配置信息
 const config = {
   "url": "https://api.weixin.qq.com/cgi-bin/message/template/send",
   "appId": "wxbc423459651363c0",
@@ -7,7 +8,7 @@ const config = {
   "user": ["oaX246GIQpySf9uj5znkf4DnDxjk", "oaX246Oan42q76oiwiH9oMlLaed4"],
   "weatherKey": "4d23ff80a7504f6b803baa826244a0a3",
   "region": "济南市"
-};
+}
 
 // 获取token
 async function getAccessToken() {
@@ -18,7 +19,7 @@ async function getAccessToken() {
 // 获取当天日期
 function getDate() {
   const time2 = new Date();
-  const date = `${time2.getFullYear() + '-' + (time2.getMonth() + 1) + '-' + time2.getDay()}`;
+  const date = `${time2.getFullYear() + '-' + (time2.getMonth() + 1) + '-' + time2.getDate()}`;
   const weeks = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
   const day = new Date().getDay();
   const week = weeks[day];
